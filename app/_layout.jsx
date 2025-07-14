@@ -1,7 +1,6 @@
 import { StyleSheet, useColorScheme, View } from "react-native";
 import { Stack } from "expo-router";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { Colors } from "../constants/colors";
+import { Colors } from "../constants/Colors";
 import { StatusBar } from "expo-status-bar";
 
 const RootLayout = () => {

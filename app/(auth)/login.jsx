@@ -5,7 +5,7 @@ import { Link } from "expo-router";
 import ThemedView from "../../components/ThemedView";
 import ThemedText from "../../components/ThemedText";
 import Spacer from "../../components/Spacer";
-import { Colors } from "../../constants/Colors";
+import ThemedButton from "../../components/ThemedButton";
 
 export default function Login() {
   const handleSubmit = () => {
@@ -19,12 +19,9 @@ export default function Login() {
         Login to your account
       </ThemedText>
 
-      <Pressable
-        onPress={handleSubmit}
-        style={({ pressed }) => [styles.btn, pressed && styles.pressed]}
-      >
+      <ThemedButton onPress={handleSubmit}>
         <Text style={{ color: "#f2f2f2" }}>Login</Text>
-      </Pressable>
+      </ThemedButton>
 
       <Spacer height={100} />
       <Link href="/register">
@@ -45,13 +42,5 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontSize: 18,
     marginBottom: 30,
-  },
-  btn: {
-    backgroundColor: Colors.primary,
-    padding: 15,
-    borderRadius: 5,
-  },
-  pressed: {
-    opacity: 0.8,
   },
 });
